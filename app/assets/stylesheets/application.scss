@@ -11,3 +11,31 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+$yellow: #738678;
+
+
+body {
+  background: $yellow; // Using this variable
+}
+
+
+a {
+  color: #eee;
+  &:hover {
+    color: blue;
+    text-decoration: none;
+    transition-delay: 20ms;
+  }
+}
+
+
+body {
+  font-family: Helvetica;
+  color: #eee;
+}
+
+
+
