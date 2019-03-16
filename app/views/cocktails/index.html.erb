@@ -1,43 +1,36 @@
 
 
-  <div class="home-banner" >
+
+
+
+<div class="home-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'cocktails.jpg' %>');">
+  <div class="banner-content">
     <h1>Derek's Cocktails</h1>
+    <p>Beverages for the discerning palate</p>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
   </div>
-
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <%= "An expertly curated list of cocktails"%>
-      </div>
-    </div>
-
-
-
-  <ul>
+</div>
+<div class="container">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <li> <%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo, width: 400, height: 500, crop: :fill %>');">
+
+          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
+          <div class="card-description">
+            <%= cocktail.name %>
+            <%= link_to 'Delete Cocktail', cocktail_path(cocktail), method: :delete %>
+          </div>
+        </div>
+
+      </div>
     <% end %>
-  </ul>
-
-  <%= link_to "Name a new Cocktail!", new_cocktail_path %>
-
-  <!-- app/views/articles/index.html.erb -->
-<%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
-      width: 400, height: 300, crop: :fill) %>
-
-<!-- for face detection -->
-<%= cl_image_tag("IMAGE_WITH_FACE_ID",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
-
-  <div class="card"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-  <div class="card-category">Popular</div>
-  <div class="card-description">
-    <h2>Some stuff</h2>
-    <p>Very cool stuff, useful and smart</p>
+    <br>
+<br>
   </div>
-  <a class="card-link" href="#" ></a>
+  </div>
 </div>
 
-</div>
+
+
+

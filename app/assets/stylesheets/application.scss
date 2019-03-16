@@ -14,18 +14,18 @@
 
 
 
-$yellow: #738678;
+$red: #6182A5;
 
 
 body {
-  background: $yellow; // Using this variable
+  background: $red; // Using this variable
 }
 
 
 a {
   color: #eee;
   &:hover {
-    color: blue;
+    color: black;
     text-decoration: none;
     transition-delay: 20ms;
   }
@@ -33,7 +33,7 @@ a {
 
 
 body {
-  font-family: Helvetica;
+  font-family: Kano;
   color: #eee;
 }
 
