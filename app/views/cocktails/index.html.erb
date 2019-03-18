@@ -3,7 +3,7 @@
 
 
 
-<div class="home-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'cocktails.jpg' %>');">
+<div class="home-banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('<%= image_path 'sazerac.jpg' %>');">
   <div class="banner-content">
     <h1>Derek's Cocktails</h1>
     <p>Beverages for the discerning palate</p>
@@ -17,7 +17,7 @@
          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo, width: 400, height: 500, crop: :fill %>');">
 
           <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
-          <div class="card-description">
+          <div class="card-description" class ="card-label">
             <%= cocktail.name %>
             <%= link_to 'Delete Cocktail', cocktail_path(cocktail), method: :delete %>
           </div>

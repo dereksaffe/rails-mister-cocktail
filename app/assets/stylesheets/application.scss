@@ -14,18 +14,19 @@
 
 
 
-$red: #6182A5;
+$red: #FFFDEE;
 
 
 body {
   background: $red; // Using this variable
+  font-family: Kano;
 }
 
 
 a {
-  color: #eee;
+  color: blue;
   &:hover {
-    color: black;
+    color: gray;
     text-decoration: none;
     transition-delay: 20ms;
   }
@@ -34,7 +35,7 @@ a {
 
 body {
   font-family: Kano;
-  color: #eee;
+  color: black;
 }
 
 
